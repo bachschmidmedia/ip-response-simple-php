@@ -1,0 +1,17 @@
+h1 {
+    font-family: Consolas, monospaced, Tahoma;
+    font-size: clamp(25px, 50vw, 59px);
+    margin: 0;
+}
+
+html, body {
+    background: #293036;
+    color: #e7eff5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 3%;
+}
+

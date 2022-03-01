@@ -2,11 +2,11 @@
 This is a simple PHP script for calling the Server with Wget or cURL to get your own public IP address.
 
 ## Live Demos
-> [ip.io7.pw](https://ip.io7.pw "ip.io7.pw")
-> 
-> [ip4.io7.pw](https://ip4.io7.pw "ip4.io7.pw")
-> 
-> [ip6.io7.pw](https://ip6.io7.pw "ip6.io7.pw")
+> <a href="https://ip.io7.pw" target="_blank">ip.io7.pw</a>
+>
+> <a href="https://ip4.io7.pw" target="_blank">ip4.io7.pw</a>
+>
+> <a href="https://ip6.io7.pw" target="_blank">ip6.io7.pw</a>
 
 
 ## Example Calls

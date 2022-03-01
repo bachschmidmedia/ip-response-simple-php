@@ -1,6 +1,14 @@
 # Simple IP Response-Server
 This is a simple PHP script for calling the Server with Wget or cURL to get your own public IP address.
 
+## Live Demos
+> [ip.io7.pw](https://ip.io7.pw "ip.io7.pw")
+> 
+> [ip4.io7.pw](https://ip4.io7.pw "ip4.io7.pw")
+> 
+> [ip6.io7.pw](https://ip6.io7.pw "ip6.io7.pw")
+
+
 ## Example Calls
 These are the example calls you can make on any CLI Device. On your Mac iTerm Terminal, your Raspberry Pi or your Ubuntu production server etc.
 

@@ -58,7 +58,7 @@ class RemoteAddress
         if (
             !$this->useProxy ||
             (isset($_SERVER['REMOTE_ADDR']) && !in_array($_SERVER['REMOTE_ADDR'], $this->trustedProxies))
-	) {
+        ) {
             return false;
         }
 
@@ -91,28 +91,29 @@ class RemoteAddress
     // [...]
 }
 
-$remote = new RemoteAddress();
+$oRemote = new RemoteAddress();
+$sUserAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
 
-if(str_starts_with($_SERVER['HTTP_USER_AGENT'], 'curl')) {
-	echo "{$remote->getIpAddress()}\r\n";
-} else {
+foreach (['curl', 'wget'] as $sValue) {
+    if(str_starts_with($sUserAgent, $sValue)) {
+        echo "{$oRemote->getIpAddress()}\r\n";
+        return;
+    }
+}
 
 echo <<<END
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{$remote->getIpAddress()}</title>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{$oRemote->getIpAddress()}</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>{$remote->getIpAddress()}</h1>
+<h1>{$oRemote->getIpAddress()}</h1>
 </body>
 </html>
 END;
-
-}
-
 
